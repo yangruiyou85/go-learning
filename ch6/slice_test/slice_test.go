@@ -35,6 +35,18 @@ func TestSliceGrowing(t *testing.T) {
 
 func TestSliceShareMemory(t *testing.T) {
 	year := []string{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}
+	t.Log(cap(year))
 	Q2 := year[3:6]
 	t.Log(Q2, len(Q2), cap(Q2))
+	summer := year[5:8]
+	t.Log(summer, len(summer), cap(summer))
+}
+
+func TestSliceComparing(t *testing.T) {
+
+	a := []int{1, 2, 3, 4}
+	//b := []int{1, 2, 3, 4}
+	if a != nil {
+		t.Log("equal")
+	}
 }
